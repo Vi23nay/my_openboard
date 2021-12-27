@@ -5,7 +5,7 @@ const app = express();//initialize and server ready
 
 app.use(express.static("public"));//frondend data-> main work
 
-let port = 5000;
+let port = process.env.PORT || 5000;//deployment
 let server = app.listen(port, () => {
     console.log('Listening to port ' + port);
 });
