@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="NewIcons/Red_Pencil.svg">
+    <title>Open-board</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <h1>Canvas example</h1> -->
+    <!-- drawing board -->
+    <div class="options-container">
+        <div class="fas fa-times"></div>
+    </div>
+    <div class="icon-pallet scale-tools">
+        <img src="./NewIcons/Undo.svg" class = "undo">
+        <img src="./NewIcons/Redo.svg" class = "redo">
+        <img src="./NewIcons/Black_Pencil.svg" class = "pen">
+        <img src="./NewIcons/eraser5.svg" class = "eraser"> 
+        <div class="rectangle material-icons-outlined">check_box_outline_blank</div>
+        <div class="fas fa-grip-lines line"></div>
+        <img src="./NewIcons/StickyNote.svg" class = "sticky">
+        <img src="./NewIcons/Photo.svg" class = "upload">        
+        <img src="./NewIcons/Download.svg" class = "download">
+        <!-- <a class = "download" id='downloadLink' download='myDrawing.png' style=display:none>Download</a> -->
+    </div>
+    <div class="pen-tools" style=display:none> 
+        <div class="pen-size-cont">
+            <input type = "range" min = "2" max = "10" value = "3" class = "size">
+        </div>
+        <div class="pen-color-cont">
+            <div class="color red"></div>
+            <div class="color lightgreen"></div>
+            <div class="color lightblue"></div>
+            <div class="color black active"></div>
+        </div>
+    </div>
+    <div class="eraser-tool" style=display:none>
+        <input type = "range" min = "2" max = "10" value = "3" class = "eraser-size">
+    </div>
+
+    <canvas></canvas>
+    <!-- html js inject -->
+    <!-- socket.io cdn link -->
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+    <!-- coonecting socket.io -->
+    <!-- io has been came from socket.io cdn upper link-->
+    <script>
+        let socket = io.connect("http://localhost:5000");
+    </script>
+    <script src="canvas.js"></script>
+    <script src="tools.js"></script>
+</body>
+
+
+</html>
