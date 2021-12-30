@@ -159,8 +159,8 @@ textarea{
     background-color :#f1f2f6;
 }
 .note-container img{ 
-    width : 3rem;
-    height : 3rem;
+    width : 100%;
+    height : 100%;
 }
 
 .active{
