@@ -158,7 +158,7 @@ textarea{
     resize : none;
     background-color :#f1f2f6;
 }
-img{ 
+.note-container img{ 
     width : 3rem;
     height : 3rem;
 }
